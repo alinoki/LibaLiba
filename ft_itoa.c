@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arichie <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/03 20:26:32 by arichie           #+#    #+#             */
-/*   Updated: 2021/04/21 15:30:08 by arichie          ###   ########.fr       */
+/*   Created: 2021/05/09 17:46:47 by arichie           #+#    #+#             */
+/*   Updated: 2021/05/09 19:59:26 by arichie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static  int     ft_abs(int n)
+static int	ft_abs(int n)
 {
-    if (n < 0)
-        return (-n);
-    return (n);
+	if (n < 0)
+		return (-n);
+	return (n);
 }
 
-static  int     ft_is_negative(int n)
+static int	ft_is_negative(int n)
 {
-    if (n < 0)
-        return (1);
-    return (0);
+	if (n < 0)
+		return (1);
+	return (0);
 }
 
-static void     ft_strrev(char *str)
+static void	ft_strrev(char *str)
 {
 	size_t	length;
 	size_t	i;
@@ -43,34 +43,34 @@ static void     ft_strrev(char *str)
 	}
 }
 
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    size_t  i;
-    int     temp;
-    char    *dest;
+	size_t	i;
+	int		temp;
+	char	*dest;
 
-    i = 0;
-    temp = n;
-    while (temp / 10 != 0)
-    {
-       i++;
-       temp /= 10;
-    }
-    temp = ft_is_negative(n); 
+	i = 0;
+	temp = n;
+	while (temp / 10 != 0)
+	{
+		i++;
+		temp /= 10;
+	}
+	temp = ft_is_negative(n);
 	if (!(dest = ft_calloc(11 + (n < 0), sizeof(char *))))
-        return (NULL);
-    if (n == 0)
-        dest[0] = '0';
-    i = 0;
-    while (n != 0)
-    {
-        dest[i] = ft_abs(n % 10) + '0';
-        n /= 10;
-        i++;
-    }
-    if (temp)
-        dest[i] = '-';
-    ft_strrev(dest);
-    dest[i + 1] = '\0';
-    return (dest);
+		return (NULL);
+	if (n == 0)
+		dest[0] = '0';
+	i = 0;
+	while (n != 0)
+	{
+		dest[i] = ft_abs(n % 10) + '0';
+		n /= 10;
+		i++;
+	}
+	if (temp)
+		dest[i] = '-';
+	ft_strrev(dest);
+	dest[i + 1] = '\0';
+	return (dest);
 }

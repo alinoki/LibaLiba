@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                          :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arichie <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/03 20:26:32 by arichie           #+#    #+#             */
-/*   Updated: 2021/04/21 15:30:08 by arichie          ###   ########.fr       */
+/*   Created: 2021/05/09 17:26:32 by arichie           #+#    #+#             */
+/*   Updated: 2021/05/09 17:26:45 by arichie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    ft_isalpha(c);
-    if ((c >= 'A') && (c <= 'Z'))
-        return (c + 32);
-    return (c);
+	ft_isalpha(c);
+	if ((c >= 'A') && (c <= 'Z'))
+		return (c + 32);
+	return (c);
 }

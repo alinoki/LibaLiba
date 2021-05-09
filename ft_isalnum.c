@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arichie <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/03 20:26:32 by arichie           #+#    #+#             */
-/*   Updated: 2021/04/21 15:30:08 by arichie          ###   ########.fr       */
+/*   Created: 2021/05/09 17:24:46 by arichie           #+#    #+#             */
+/*   Updated: 2021/05/09 18:00:12 by arichie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    return((ft_isalpha(c)) || ft_isdigit(c));
+	return ((ft_isalpha(c)) || ft_isdigit(c));
 }

@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arichie <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/03 20:26:32 by arichie           #+#    #+#             */
-/*   Updated: 2021/04/21 15:30:08 by arichie          ###   ########.fr       */
+/*   Created: 2021/05/09 17:54:55 by arichie           #+#    #+#             */
+/*   Updated: 2021/05/09 17:55:12 by arichie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    if (!s)
+	if (!s)
 		return ;
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);

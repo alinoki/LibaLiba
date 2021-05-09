@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arichie <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/03 20:26:32 by arichie           #+#    #+#             */
-/*   Updated: 2021/04/21 15:30:08 by arichie          ###   ########.fr       */
+/*   Created: 2021/05/09 17:15:19 by arichie           #+#    #+#             */
+/*   Updated: 2021/05/09 17:17:59 by arichie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(char *s, int c)
+char	*ft_strchr(char *s, int c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (*(s + i) !=  '\0')
-        {
-            if (*(s + i) == (char) c)
-                return (s + i);
-            i++;
-        }
-    if ((char) c == '\0')
-        return (s + i);
-    return (NULL);
+	i = 0;
+	while (*(s + i) != '\0')
+	{
+		if (*(s + i) == (char) c)
+			return (s + i);
+		i++;
+	}
+	if ((char) c == '\0')
+		return (s + i);
+	return (NULL);
 }
